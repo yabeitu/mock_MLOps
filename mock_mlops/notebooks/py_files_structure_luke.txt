@@ -1,0 +1,57 @@
+What this file is:
+
+Having a look at the original main jupyter notebook (main.ipynb) and trying to mentally segment it into py files for the repository structure
+
+From looking at this, i think we should try running this code as is to double check it works and how we expect before using/changing
+
+
+config.py "store useful variables and configuration"
+
+ this includes imports, variables and functions
+
+	create artifact directory - i think all, but separate the imports from variables
+	pandas dataframe print options - same as above
+
+	helper functions - makes functions
+
+	##check that the imports are included from:
+			- read data
+			- data cleaning
+			- data standardization
+			- data drift artifact
+
+
+
+dataset.py "scripts to download or generate data"
+
+	read data - getting the dates part
+	
+	feature selection - this edits the data
+	data cleaning - all data editing
+	create categorical data columns - data editing
+	separate categorical and continuous columns - data editing
+	
+	outlier summary - outputs a csv file of said outliers might be important to be in place here
+
+	impute data - fill in empty records (Data editing)
+	data standardization - downloading and editing data
+	combine data - data editing
+	data drift artifact - downloading data and writing out
+	binning object columns - data editing
+	save gold medallion dataset - some commented out stuff might be relevant once, otherwise just a write out
+
+
+
+features.py "code to create features for modelling"
+
+
+
+modelling - predict.py "Code to run model inference with trained models"
+
+
+
+modelling - train.py "Code to train models"
+
+
+
+plots.py "Code to create visualizations"
